@@ -1,64 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Home</title>
+<html lang="en-US">
+  <head>
+    <title>Yirun Li | Dreame Technology Co., Ltd.</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Yirun Li's professional portfolio in AI, deep learning, and 3D reconstruction."
+    />
+    <meta
+      name="keywords"
+      content="Yirun Li, AI, Deep Learning, 3D Reconstruction, Dreame Technology"
+    />
+
+    <link rel="canonical" href="https://yirunli.github.io/" />
+    <link
+      rel="icon"
+      media="(prefers-color-scheme:dark)"
+      href="./assets/img/icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      media="(prefers-color-scheme:light)"
+      href="./assets/img/icon.png"
+      type="image/png"
+    />
+    <script
+      src="./assets/js/favicon-switcher.js"
+      type="application/javascript"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header, footer {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
+      .pipeline-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .left-section, .right-section {
+        background: #ffffff;
+        border: 1px solid #e1e4e8;
+        border-radius: 10px;
+        padding: 20px;
+        width: 280px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+      }
+
+      .arrow-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .omniverse-logo {
+        width: 120px;
+        height: auto;
+        margin: 0;
+      }
+
+      .arrow-label {
+        color: #333;
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+      }
+
+      .arrow svg {
+        width: 120px;
+        height: 24px;
+      }
+
+      .arrow svg path {
+        stroke: #333;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .arrow svg path.arrow-line {
+        d: path('M5 12 L65 12');
+      }
+
+      .arrow svg path.arrow-head {
+        d: path('M55 4 L65 12 L55 20');
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .image-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .image-item .image-label {
+        font-size: 12px;
+        margin-top: 5px;
+        color: #666;
+      }
+
+      .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      header {
+        width: 270px;
+        padding: 25px;
+        float: left;
+        position: fixed;
+      }
+
+      section {
+        margin-left: 300px;
+        padding: 25px;
+        float: left;
+      }
     </style>
-</head>
-<body>
-    <header>
-        <h1>Li Yirun</h1>
-        <!-- add a photo, and set in a 150*150 circle -->
-        <img src="./images/AboutMe.jpg" alt="Your Name" style="border-radius: 50%; width: 150px; height: 150px;">
-        <p>Li Yirun</p>
-    </header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a class="image avatar"
+          ><img src="./assets/img/AboutMe.jpg" alt="Yirun Li"
+        /></a>
+        <h1>Yirun Li</h1>
+        <position style="font-size: 1.1rem"
+          >Simulation Algorithm Engineer at Dreame Technology Co.,
+          Ltd.</position
+        >
+        <br />
+        <email>ryan.yirun.li@gmail.com</email>
+        <br />
+        <div class="social-icons">
+          <a href="https://github.com/">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <br />
+      </header>
+      <section>
+        <h2 id="about-me">About Me</h2>
+        <p>
+          Hello, I'm Yirun Li, a passionate engineer with over four years of experience in artificial intelligence, deep learning, and 3D reconstruction. 
+          I received my Master's degree in Computer Science in 2020 and Bachelor's degree in Software Engineering in 2017 from Huazhong University of Science and Technology. 
+          My expertise lies in leveraging cutting-edge technologies to create innovative solutions, optimize autonomous systems, and enhance data generation processes.
+        </p>
+        <p>
+          Currently, I work as a Simulation Algorithm Engineer at Dreame Technology, where I focus on synthetic data generation, robotic simulation, and 3D reconstruction. 
+          My work has enabled significant advancements in machine learning training datasets and simulation-based algorithm development. 
+          With a strong foundation in Python, C++, and frameworks like PyTorch and TensorRT, I am driven to tackle complex challenges and create impactful solutions in the AI and robotics fields.
+        </p>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Describe who you are, your background, and what you do. Include any professional attributes or experiences that define you.</p>
-        </section>
+        <h2 id="projects">Projects</h2>
+        <h3>Synthetic Data Generation</h3>
+        <p>
+            Led the development of an AI synthetic data generation system.
+        </p>
         
-        <section>
-            <h2>Projects</h2>
-            <p>Highlight some of your key projects. Describe the project, your role, and any significant outcomes or accomplishments.</p>
-        </section>
-        
-        <section>
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <!-- <p>LinkedIn: <a href="your-linkedin-url">your-linkedin-url</a></p> -->
-        </section>
-    </main>
+        <!-- 重新设计的流程图布局 -->
+        <div class="pipeline-container">
+            <!-- 左侧模块 -->
+            <div class="left-section">
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="assets/img/workflow/obj_model.jpg" alt="Real Model">
+                        <span class="image-label">Multiple Object Models</span>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/img/workflow/scene_model.png" alt="Scene Model">
+                        <span class="image-label">Multiple Scene Models</span>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/img/workflow/obj_material.gif" 
+                             alt="Material Change" 
+                             autoplay="autoplay"
+                             loop="loop">
+                        <span class="image-label">Object Material Variation</span>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/img/workflow/scene_material.gif" 
+                             alt="Scene Change" 
+                             autoplay="autoplay"
+                             loop="loop">
+                        <span class="image-label">Scene Material Variation</span>
+                    </div>
+                </div>
+            </div>
 
-    <!-- <footer>
-        <p>Copyright © Your Name 2024</p>
-    </footer> -->
-</body>
+            <!-- 修改箭头部分的代码 -->
+            <div class="arrow">
+                <div class="arrow-content">
+                    <img src="assets/img/workflow/nvidia.png" alt="NVIDIA Omniverse" class="omniverse-logo">
+                    <svg viewBox="0 0 60 24">
+                        <path class="arrow-line" d="M5 12 L45 12"/>
+                        <path class="arrow-head" d="M35 4 L45 12 L35 20"/>
+                    </svg>
+                    <div class="arrow-label">Ray tracing rendering</div>
+                </div>
+            </div>
+
+            <!-- 右侧模块 -->
+            <div class="right-section">
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="assets/img/workflow/rgb.png" alt="RGB">
+                        <span class="image-label">RGB</span>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/img/workflow/bbox.png" alt="Bounding Box">
+                        <span class="image-label">Bounding Box</span>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/img/workflow/segmentation.png" alt="Segmentation">
+                        <span class="image-label">Segmentation</span>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/img/workflow/depth.png" alt="Depth">
+                        <span class="image-label">Depth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 添加图片轮播区域 -->
+        <h4 style="text-align: center; margin: 30px 0 20px;">Test Time: Can you tell which images below are real and which are synthetic?</h4>
+        <div class="carousel-container" style="max-width: 800px; margin: 0 auto;">
+            <button class="carousel-button prev">&#10094;</button>
+            <div class="carousel-wrapper">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <img src="assets/img/real.vs.sim/real/bottle.jpg" alt="Synthetic Data 1">
+                        <img src="assets/img/real.vs.sim/sim/bottle.jpg" alt="Synthetic Data 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/real.vs.sim/real/bottle2.jpg" alt="Synthetic Data 3">
+                        <img src="assets/img/real.vs.sim/sim/bottle2.jpg" alt="Synthetic Data 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/real.vs.sim/real/toy.jpg" alt="Synthetic Data 5">
+                        <img src="assets/img/real.vs.sim/sim/toy.jpg" alt="Synthetic Data 6">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next">&#10095;</button>
+            <div class="carousel-dots"></div>
+        </div>
+
+        <h3>Robot Simulation</h3>
+        <p>
+            Advanced 3D indoor scene reconstructions using the 3D Gaussian
+            Splatting algorithm. Implemented real-time robot navigation and interaction
+            simulations in complex indoor environments, achieving 95% accuracy in
+            collision detection and path planning.
+        </p>
+
+        <h3> Autonomous Driving Solutions</h3>
+        <p>
+            Developed comprehensive autonomous driving solutions incorporating sensor
+            fusion, perception algorithms, and path planning. Created high-fidelity
+            simulation environments for testing and validation of autonomous driving
+            systems under various scenarios and weather conditions.
+        </p>
+      </section>
+      <footer>
+        <!-- <p>
+          <small
+            >Powered by Jekyll and
+            <a
+              href="https://github.com/yaoyao-liu/minimal-light"
+              target="_blank"
+              rel="noopener"
+              >Minimal Light</a
+            >
+            theme.</small
+          >
+        </p> -->
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    <script src="assets/js/carousel.js"></script>
+  </body>
 </html>
