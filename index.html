@@ -39,108 +39,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <style>
-      .pipeline-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-      }
-
-      .left-section, .right-section {
-        background: #ffffff;
-        border: 1px solid #e1e4e8;
-        border-radius: 10px;
-        padding: 20px;
-        width: 280px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      }
-
-      .arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 30px;
-      }
-
-      .arrow-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .omniverse-logo {
-        width: 120px;
-        height: auto;
-        margin: 0;
-      }
-
-      .arrow-label {
-        color: #333;
-        font-size: 14px;
-        text-align: center;
-        margin: 0;
-      }
-
-      .arrow svg {
-        width: 120px;
-        height: 24px;
-      }
-
-      .arrow svg path {
-        stroke: #333;
-        stroke-width: 2.5;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .arrow svg path.arrow-line {
-        d: path('M5 12 L65 12');
-      }
-
-      .arrow svg path.arrow-head {
-        d: path('M55 4 L65 12 L55 20');
-      }
-
-      .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-
-      .image-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      .image-item .image-label {
-        font-size: 12px;
-        margin-top: 5px;
-        color: #666;
-      }
-
-      .wrapper {
-        width: 1200px;
-        margin: 0 auto;
-        display: flex;
-      }
-
-      header {
-        width: 270px;
-        padding: 25px;
-        float: left;
-        position: fixed;
-      }
-
-      section {
-        margin-left: 300px;
-        padding: 25px;
-        float: left;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -182,7 +80,7 @@
         <h2 id="projects">Projects</h2>
         <h3>Synthetic Data Generation</h3>
         <p>
-            Led the development of an AI synthetic data generation system.
+            AI synthetic data generation system with NVIDIA Omniverse
         </p>
         
         <!-- 重新设计的流程图布局 -->
@@ -192,11 +90,11 @@
                 <div class="image-grid">
                     <div class="image-item">
                         <img src="assets/img/workflow/obj_model.jpg" alt="Real Model">
-                        <span class="image-label">Multiple Object Models</span>
+                        <span class="image-label">Multiple Objects</span>
                     </div>
                     <div class="image-item">
                         <img src="assets/img/workflow/scene_model.png" alt="Scene Model">
-                        <span class="image-label">Multiple Scene Models</span>
+                        <span class="image-label">Multiple Scenes</span>
                     </div>
                     <div class="image-item">
                         <img src="assets/img/workflow/obj_material.gif" 
@@ -251,14 +149,14 @@
         </div>
 
         <!-- 添加图片轮播区域 -->
-        <h4 style="text-align: center; margin: 30px 0 20px;">Test Time: Can you tell which images below are real and which are synthetic?</h4>
+        <h4 style="text-align: center; margin: 30px 0 20px;">Testing Time: Can you tell which images below are real and which are synthetic?</h4>
         <div class="carousel-container" style="max-width: 800px; margin: 0 auto;">
             <button class="carousel-button prev">&#10094;</button>
             <div class="carousel-wrapper">
                 <div class="carousel-slides">
                     <div class="carousel-slide">
-                        <img src="assets/img/real.vs.sim/real/bottle.jpg" alt="Synthetic Data 1">
-                        <img src="assets/img/real.vs.sim/sim/bottle.jpg" alt="Synthetic Data 2">
+                        <img src="assets/img/real.vs.sim/sim/bottle.jpg" alt="Synthetic Data 1">
+                        <img src="assets/img/real.vs.sim/real/bottle.jpg" alt="Synthetic Data 2">
                     </div>
                     <div class="carousel-slide">
                         <img src="assets/img/real.vs.sim/real/bottle2.jpg" alt="Synthetic Data 3">
@@ -268,28 +166,173 @@
                         <img src="assets/img/real.vs.sim/real/toy.jpg" alt="Synthetic Data 5">
                         <img src="assets/img/real.vs.sim/sim/toy.jpg" alt="Synthetic Data 6">
                     </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/real.vs.sim/sim/dirty.jpg" alt="Synthetic Data 7">
+                        <img src="assets/img/real.vs.sim/real/dirty.jpg" alt="Synthetic Data 8">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/real.vs.sim/sim/thread.jpg" alt="Synthetic Data 9">
+                        <img src="assets/img/real.vs.sim/real/thread.jpg" alt="Synthetic Data 10">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next">&#10095;</button>
+            <div class="carousel-dots"></div>
+        </div>
+        <div>
+            <div>
+                <!-- 答案部分 -->
+                <div class="answer-section">
+                    <button class="collapsible" style="font-family: 'Crimson Pro', serif; font-size: 1.17em;">Get the Answer</button>
+                    <div class="collapsible-content">
+                        <div class="carousel-container" style="max-width: 800px; margin: 20px auto;">
+                            <button class="carousel-button prev">&#10094;</button>
+                            <div class="carousel-wrapper">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slide">
+                                        <img src="assets/img/real.vs.sim/sim/bottle_labeled.jpg" alt="Synthetic Data 1">
+                                        <img src="assets/img/real.vs.sim/real/bottle_labeled.jpg" alt="Synthetic Data 2">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="assets/img/real.vs.sim/real/bottle2_labeled.jpg" alt="Synthetic Data 3">
+                                        <img src="assets/img/real.vs.sim/sim/bottle2_labeled.jpg" alt="Synthetic Data 4">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="assets/img/real.vs.sim/real/toy_labeled.jpg" alt="Synthetic Data 5">
+                                        <img src="assets/img/real.vs.sim/sim/toy_labeled.jpg" alt="Synthetic Data 6">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="assets/img/real.vs.sim/sim/dirty_labeled.jpg" alt="Synthetic Data 7">
+                                        <img src="assets/img/real.vs.sim/real/dirty_labeled.jpg" alt="Synthetic Data 8">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="assets/img/real.vs.sim/sim/thread_labeled.jpg" alt="Synthetic Data 9">
+                                        <img src="assets/img/real.vs.sim/real/thread_labeled.jpg" alt="Synthetic Data 10">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-button next">&#10095;</button>
+                            <div class="carousel-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <p>
+            AI synthetic data generation with Diffusion Model
+        </p> -->
+
+        <p>
+            Synthetic data real to sim.
+        </p>
+        <!-- 添加两个并排的动图展示 -->
+        <div class="gif-container">
+            <div class="gif-item">
+                <img src="assets/img/grasp_data/real.gif" alt="Navigation Demo" class="demo-gif">
+                <p class="gif-caption">Real Data</p>
+            </div>
+            <div class="gif-item">
+                <img src="assets/img/grasp_data/sim.gif" alt="Obstacle Avoidance" class="demo-gif">
+                <p class="gif-caption">Synthetic Data</p>
+            </div>
+        </div>
+
+        <h3>Robot Simulation</h3>
+        <p>
+            Robot simulation with NVIDIA Omniverse
+        </p>
+
+        <div class="gif-item">
+            <img src="assets/img/grasp_data/RobotGrasp2.gif" 
+                 alt="Robot Grasp Demo" 
+                 class="demo-gif"
+                 autoplay="autoplay"
+                 loop="loop">
+            <p class="gif-caption">Simulation for debugging simulation systems with robotic arms</p>
+        </div>
+
+        <h3>3D Reconstruction</h3>
+        <p>
+            Advanced 3D indoor scene reconstruction using the 3D Gaussian
+            Splatting algorithm.
+        </p>
+
+        <div class="gif-item">
+            <img src="assets/img/3DGS/3DGS.gif" 
+                 alt="3DGS Demo" 
+                 class="demo-gif"
+                 autoplay="autoplay"
+                 loop="loop">
+            <p class="gif-caption">3D indoor scene reconstruction result</p>
+        </div>
+
+        <p>
+            Input images vs reconstructed results
+        </p>
+
+        <!-- 添加图片轮播区域 -->
+        <div class="carousel-container" style="max-width: 800px; margin: 0 auto;">
+            <button class="carousel-button prev">&#10094;</button>
+            <div class="carousel-wrapper">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <img src="assets/img/3DGS/real/Bedroom1_1_left_labeled.png" alt="Bedroom1_1_left">
+                        <img src="assets/img/3DGS/reconstruction/Bedroom1_1_right_labeled.png" alt="Bedroom1_1_right">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/3DGS/real/Bedroom1_2_left_labeled.png" alt="Bedroom1_2_left">
+                        <img src="assets/img/3DGS/reconstruction/Bedroom1_2_right_labeled.png" alt="Bedroom1_2_right">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/3DGS/real/Bedroom1_3_left_labeled.png" alt="Bedroom1_3_left">
+                        <img src="assets/img/3DGS/reconstruction/Bedroom1_3_right_labeled.png" alt="Bedroom1_3_right">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/3DGS/real/Bedroom2_1_left_labeled.png" alt="Bedroom2_1_left">
+                        <img src="assets/img/3DGS/reconstruction/Bedroom2_1_right_labeled.png" alt="Bedroom2_1_right">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/3DGS/real/Bedroom2_2_left_labeled.png" alt="Bedroom2_2_left">
+                        <img src="assets/img/3DGS/reconstruction/Bedroom2_2_right_labeled.png" alt="Bedroom2_2_right">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/img/3DGS/real/Bedroom2_3_left_labeled.png" alt="Bedroom2_3_left">
+                        <img src="assets/img/3DGS/reconstruction/Bedroom2_3_right_labeled.png" alt="Bedroom2_3_right">
+                    </div>                    
                 </div>
             </div>
             <button class="carousel-button next">&#10095;</button>
             <div class="carousel-dots"></div>
         </div>
 
-        <h3>Robot Simulation</h3>
+        <h3>Autonomous Driving Solutions</h3>
         <p>
-            Advanced 3D indoor scene reconstructions using the 3D Gaussian
-            Splatting algorithm. Implemented real-time robot navigation and interaction
-            simulations in complex indoor environments, achieving 95% accuracy in
-            collision detection and path planning.
+            RoboGo Autonomous Driving Car Vision Solution
         </p>
-
-        <h3> Autonomous Driving Solutions</h3>
+        <!-- 添加两个并排的动图展示 -->
+        <div class="gif-container">
+            <div class="gif-item">
+                <img src="assets/img/UBT/RoboGo/obstable.gif" alt="Navigation Demo" class="demo-gif">
+                <p class="gif-caption">Autonomous Navigation and Obstacle Detection and Avoidance</p>
+            </div>
+            <div class="gif-item">
+                <img src="assets/img/UBT/RoboGo/traffic_light.gif" alt="Obstacle Avoidance" class="demo-gif">
+                <p class="gif-caption">Real-time Traffic Light Detection and Navigation</p>
+            </div>
+        </div>
         <p>
-            Developed comprehensive autonomous driving solutions incorporating sensor
-            fusion, perception algorithms, and path planning. Created high-fidelity
-            simulation environments for testing and validation of autonomous driving
-            systems under various scenarios and weather conditions.
+            Electric wheelchair automatic navigation system
         </p>
-      </section>
+        <div class="gif-item">
+            <img src="assets/img/UBT/wheelchair.gif" 
+                 alt="Wheelchair Navigation Demo" 
+                 class="demo-gif"
+                 autoplay="autoplay"
+                 loop="loop">
+            <p class="gif-caption">Electric wheelchair automatic navigation system</p>
+        </div>
+    </section>
       <footer>
         <!-- <p>
           <small
@@ -307,5 +350,6 @@
     </div>
     <script src="/assets/js/scale.fix.js"></script>
     <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/collapsible.js"></script>
   </body>
 </html>
