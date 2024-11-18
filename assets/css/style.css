@@ -891,3 +891,18 @@ h3 {
 .answer-section {
   margin-left: 20px;
 }
+
+.gif-item.wide-gif {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    flex: none !important;
+    width: 100% !important;
+}
+
+.gif-item.wide-gif .demo-gif {
+    width: 100% !important;
+    max-width: 800px !important;
+    height: auto !important;
+}
